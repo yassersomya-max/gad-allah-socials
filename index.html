@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gad Allah Socials</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
 * {
   margin: 0;
@@ -23,15 +22,6 @@ body {
   padding: 20px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  max-width: 900px;
-  width: 100%;
-  align-items: center;
-}
-
 .card {
   background: white;
   padding: 50px 40px;
@@ -39,15 +29,8 @@ body {
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.6s ease-out;
-}
-
-.qr-section {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.6s ease-out 0.2s both;
+  max-width: 500px;
+  width: 100%;
 }
 
 @keyframes slideUp {
@@ -75,41 +58,6 @@ p {
   color: #666;
   font-size: 1.1em;
   margin-bottom: 30px;
-  font-weight: 300;
-}
-
-.qr-section h2 {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.qr-code-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
-
-#qrcode {
-  display: flex;
-  justify-content: center;
-}
-
-#qrcode img {
-  border-radius: 10px;
-}
-
-.qr-text {
-  color: #666;
-  font-size: 0.95em;
   font-weight: 300;
 }
 
@@ -203,13 +151,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card,
-  .qr-section {
+  .card {
     padding: 40px 25px;
   }
 
@@ -225,48 +167,26 @@ a:hover {
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="card">
-    <h1>Gad Allah</h1>
-    <p>Follow on social media</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com/share/173nyDxARb/" class="facebook" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook"></i>
-        <span>Facebook</span>
-      </a>
-      <a href="https://www.instagram.com/gad_allah21?igsh=dmZ3Zm92MjUyeG40" class="instagram" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-        <span>Instagram</span>
-      </a>
-      <a href="https://www.tiktok.com/@gadallah220?_r=1&_t=ZS-97CnjNMK5gq" class="tiktok" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-tiktok"></i>
-        <span>TikTok</span>
-      </a>
-    </div>
-    <div class="footer">
-      <p>✨ Connect and follow for exclusive content</p>
-    </div>
+<div class="card">
+  <h1>Gad Allah</h1>
+  <p>Follow on social media</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/173nyDxARb/" class="facebook" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i>
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/gad_allah21?igsh=dmZ3Zm92MjUyeG40" class="instagram" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.tiktok.com/@gadallah220?_r=1&_t=ZS-97CnjNMK5gq" class="tiktok" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-tiktok"></i>
+      <span>TikTok</span>
+    </a>
   </div>
-
-  <div class="qr-section">
-    <h2>Quick Access</h2>
-    <div class="qr-code-container">
-      <div id="qrcode"></div>
-    </div>
-    <p class="qr-text">📱 Scan to visit all social links</p>
+  <div class="footer">
+    <p>✨ Connect and follow for exclusive content</p>
   </div>
 </div>
-
-<script>
-  // Generate QR code with current page URL
-  new QRCode(document.getElementById("qrcode"), {
-    text: window.location.href,
-    width: 200,
-    height: 200,
-    colorDark: "#667eea",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.H
-  });
-</script>
 </body>
 </html>
