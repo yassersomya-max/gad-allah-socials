@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gad Allah Socials</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+p {
+  color: #666;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.05em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+a:hover::before {
+  left: 100%;
+}
+
+a i {
+  font-size: 1.3em;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+a span {
+  z-index: 1;
+}
+
+a:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+
+a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.facebook {
+  background: #1877F2;
+}
+
+.facebook:hover {
+  background: #155db4;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram:hover {
+  filter: brightness(0.9);
+}
+
+.tiktok {
+  background: #000000;
+}
+
+.tiktok:hover {
+  background: #333333;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  a {
+    padding: 14px 20px;
+    font-size: 1em;
+  }
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Gad Allah</h1>
+  <p>Follow on social media</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/173nyDxARb/" class="facebook" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-facebook"></i>
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/gad_allah21?igsh=dmZ3Zm92MjUyeG40" class="instagram" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.tiktok.com/@gadallah220?_r=1&_t=ZS-97CnjNMK5gq" class="tiktok" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-tiktok"></i>
+      <span>TikTok</span>
+    </a>
+  </div>
+  <div class="footer">
+    <p>✨ Connect and follow for exclusive content</p>
+  </div>
+</div>
+</body>
+</html>
